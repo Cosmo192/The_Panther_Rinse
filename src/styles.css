@@ -1,0 +1,41 @@
+@import "tailwindcss" source(".");
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: #FFFFFF;
+    color: #1A1A1A;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+  button { cursor: pointer; }
+  :where(button, a):focus-visible { outline: 3px solid #0066CC; outline-offset: 4px; }
+  button:disabled { cursor: not-allowed; }
+}
+
+@layer components {
+  .page-shell { @apply mx-auto min-h-dvh px-4 py-8 sm:px-8 sm:py-12; }
+  .eyebrow { @apply text-xs font-bold tracking-[0.18em] text-primary uppercase; }
+  .page-title { @apply text-3xl font-semibold tracking-tight sm:text-5xl; }
+  .section-title { @apply text-xl font-semibold text-ink; }
+  .panel { @apply rounded-card border border-line bg-canvas p-5 sm:p-6; }
+  .status-badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold; }
+  .status-free { @apply bg-success-soft text-success-ink; }
+  .status-in-use { @apply bg-danger-soft text-danger-ink; }
+  .alert { @apply rounded-control border border-danger-border bg-danger-soft p-4 text-sm leading-6 text-danger-ink; }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-control px-5 py-3 text-sm font-semibold transition-colors duration-150 disabled:opacity-50;
+  }
+  .btn-primary { @apply bg-primary text-white enabled:hover:bg-primary-hover enabled:active:bg-primary-active; }
+  .btn-secondary { @apply border border-line bg-canvas text-primary enabled:hover:bg-primary-soft enabled:active:bg-surface; }
+  .btn-success { @apply bg-success text-ink enabled:hover:bg-success-border enabled:active:bg-success-soft; }
+  .btn-danger { @apply bg-danger-ink text-white enabled:hover:bg-danger-ink/90 enabled:active:bg-danger-ink/80; }
+  .btn-large { @apply min-h-16 w-full px-6 text-xl; }
+  .text-link { @apply inline-flex min-h-12 items-center rounded-control text-sm font-semibold text-primary underline-offset-4 hover:underline active:text-primary-active; }
+  .skeleton { @apply h-28 rounded-card bg-line/60 motion-safe:animate-pulse; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

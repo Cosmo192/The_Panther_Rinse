@@ -1,0 +1,27 @@
+{
+  "name": "@gsu-laundry/server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit --pretty false",
+    "db:migrate": "node --import tsx src/db/cli.ts migrate",
+    "db:reset": "node --import tsx src/db/cli.ts reset"
+  },
+  "dependencies": {
+    "better-sqlite3": "latest",
+    "cors": "latest",
+    "express": "latest"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "latest",
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

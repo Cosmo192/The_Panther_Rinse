@@ -1,0 +1,13 @@
+project_id = "gsu-dorm-laundry-tracker"
+
+[functions.get-machines]
+verify_jwt = false
+
+[functions.mark-machine-in-use]
+verify_jwt = false
+
+[functions.mark-machine-free]
+verify_jwt = false
+
+[functions.validate-qr-token]
+verify_jwt = false
