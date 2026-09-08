@@ -21,7 +21,7 @@ export function HomePage() {
     <main className="page-shell max-w-7xl">
       <header className="mb-8 flex flex-wrap items-start justify-between gap-5">
         <div>
-          <p className="eyebrow">GSU · Residence Hall</p>
+          <p className="eyebrow">GSU University Commons A</p>
           <h1 className="page-title mt-3">Laundry room</h1>
           <p className="mt-3 text-muted">A quick check before you head downstairs.</p>
         </div>
