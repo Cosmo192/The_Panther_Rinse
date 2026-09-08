@@ -9,7 +9,7 @@ export default function App() {
   return (
     <main>
       <header>
-        <span className="eyebrow">GSU Housing</span>
+        <span className="eyebrow">GSU University Commons A</span>
         <h1>Laundry room</h1>
         <p>See what’s available before heading downstairs.</p>
       </header>
